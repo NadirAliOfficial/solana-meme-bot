@@ -81,6 +81,11 @@ def main():
     dashboard_thread.start()
     logger.info(f"Dashboard running on http://{config.dashboard_host}:{config.dashboard_port}")
 
+    if config.dashboard_only:
+        logger.info("DASHBOARD_ONLY mode - trading loops disabled, dashboard stays up")
+        dashboard_thread.join()
+        return
+
     scan_thread = threading.Thread(target=_market_scan_loop, args=(trader, state_path), daemon=True)
     scan_thread.start()
 
