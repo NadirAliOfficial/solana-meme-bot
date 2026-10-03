@@ -315,7 +315,7 @@ PAGE = """
       <div id="closed-table" class="table-scroll">{{ closed_table_html|safe }}</div>
     </div>
 
-    <footer>Solana Meme Bot &middot; dashboard refreshes every 5 seconds</footer>
+    <footer>Solana Meme Bot &middot; dashboard refreshes every 5 seconds<br>For keys, please contact @theteamnak on Telegram</footer>
   </div>
 
   <script>
