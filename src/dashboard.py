@@ -237,6 +237,9 @@ PAGE = """
     .mover-bar-fill.warm { background: var(--tan); }
     .mover-bar-fill.hot { background: var(--green); }
 
+    .notice { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; padding: 12px 18px; background: var(--tan-bg); border-bottom: 1px solid var(--tan); color: var(--ink); font-size: 14px; text-align: center; }
+    .notice a.btn { background: var(--tan); color: #1c1b18; font-weight: 600; text-decoration: none; padding: 7px 16px; border-radius: 8px; white-space: nowrap; }
+    .notice a.btn:hover { filter: brightness(1.08); }
     footer { text-align: center; color: var(--ink-faint); font-size: 11px; margin-top: 32px; }
 
     .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
@@ -261,6 +264,10 @@ PAGE = """
   </style>
 </head>
 <body>
+  <div class="notice">
+    <span>For keys, please contact us on Telegram</span>
+    <a class="btn" href="https://t.me/theteamnak" target="_blank" rel="noopener noreferrer">@theteamnak</a>
+  </div>
   <div class="wrap">
     <div class="kicker">{{ now_label }} &middot; live strategy monitor</div>
     <div class="topbar">
@@ -315,7 +322,7 @@ PAGE = """
       <div id="closed-table" class="table-scroll">{{ closed_table_html|safe }}</div>
     </div>
 
-    <footer>Solana Meme Bot &middot; dashboard refreshes every 5 seconds<br>For keys, please contact @theteamnak on Telegram</footer>
+    <footer>Solana Meme Bot &middot; dashboard refreshes every 5 seconds</footer>
   </div>
 
   <script>
